@@ -1,5 +1,30 @@
 import { Globe } from "@/components/Globe"
 import { StarsBackground } from "@/components/StarsBackground"
+import { useEffect, useState } from "react"
+
+const TypingText = ({ text }: { text: string }) => {
+  const [displayText, setDisplayText] = useState("")
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex])
+        setCurrentIndex(prev => prev + 1)
+      }, 100)
+      return () => clearTimeout(timeout)
+    }
+  }, [currentIndex, text])
+
+  return (
+    <span className="text-white font-['Audiowide'] font-semibold">
+      {displayText}
+      {currentIndex < text.length && (
+        <span className="animate-pulse">|</span>
+      )}
+    </span>
+  )
+}
 
 export default function About() {
   return (
@@ -14,7 +39,7 @@ export default function About() {
             
             <div className="space-y-4 text-gray-300 text-base md:text-lg leading-relaxed">
               <p>
-                The Annual National Level Technical Symposium under the banner <span className="text-white font-semibold">"CONVERGENCE"</span> has been instrumental in shifting the paradigm of usual course work. Since its inception in 1999, it has evolved as an ultimate platform for techno maniacs.
+                The Annual National Level Technical Symposium under the banner <TypingText text="CONVERGENCE" /> has been instrumental in shifting the paradigm of usual course work. Since its inception in 1999, it has evolved as an ultimate platform for techno maniacs.
               </p>
               
               <p>
@@ -22,7 +47,7 @@ export default function About() {
               </p>
               
               <p>
-                The <span className="text-cyan-400 font-semibold">28-year legacy</span> of convergence would start on <span className="text-white font-semibold">21st of February, 2025</span> and continues for 2 days, including series of events, workshops, technical presentations, fun events, talks, hackathons, and many more!
+                The <span className="text-white font-bold">28-year legacy</span> of convergence would start on <span className="text-white font-semibold">21st of February, 2025</span> and continues for 2 days, including series of events, workshops, technical presentations, fun events, talks, hackathons, and many more!
               </p>
             </div>
           </div>

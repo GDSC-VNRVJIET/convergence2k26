@@ -1,5 +1,6 @@
 ﻿import CircularGallery from '../components/CircularGallery'
 import { StarsBackground } from '@/components/StarsBackground'
+import { useEffect, useState } from 'react'
 import robotics from '../assets/robotics.png'
 import healthcaretech from '../assets/healthcaretech.png'
 import mobility from '../assets/mobility.png'
@@ -8,6 +9,37 @@ import enterprise from '../assets/enterprise.png'
 import design from '../assets/design.png'
 import smartliving from '../assets/smartliving.png'
 import techforsocialgood from '../assets/techforsocialgood.png'
+
+const TypingText = ({ text }: { text: string }) => {
+  const [displayText, setDisplayText] = useState("")
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex])
+        setCurrentIndex(prev => prev + 1)
+      }, 80)
+      return () => clearTimeout(timeout)
+    } else {
+      // Reset after a pause to loop the animation
+      const resetTimeout = setTimeout(() => {
+        setDisplayText("")
+        setCurrentIndex(0)
+      }, 2000)
+      return () => clearTimeout(resetTimeout)
+    }
+  }, [currentIndex, text])
+
+  return (
+    <span className="inline-block font-['Audiowide']">
+      {displayText}
+      {currentIndex < text.length && (
+        <span className="inline-block animate-pulse ml-0.5">|</span>
+      )}
+    </span>
+  )
+}
 
 export default function Themes() {
   const themes = [
@@ -25,8 +57,8 @@ export default function Themes() {
     <StarsBackground className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
-            Themes in the <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">Convergence</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+            Themes in the <TypingText text="Convergence" />
           </h2>
           <p className="text-gray-400 text-xl md:text-2xl font-normal mb-8">
             Each theme is a bouquet of events
