@@ -31,13 +31,13 @@ export default function About() {
     <section className="relative w-full min-h-screen">
       <StarsBackground className="absolute inset-0 flex h-screen w-full items-center">
         {/* Left side - Text content */}
-        <div className="relative z-10 w-1/2 px-12 lg:px-20">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
+        <div className="relative z-10 w-full lg:w-1/2 px-4 sm:px-6 md:px-12 lg:px-20 py-20 lg:py-0">
+          <div className="max-w-2xl mx-auto lg:mx-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
               About
             </h2>
             
-            <div className="space-y-4 text-gray-300 text-base md:text-lg leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
               <p>
                 The Annual National Level Technical Symposium under the banner <TypingText text="CONVERGENCE" /> has been instrumental in shifting the paradigm of usual course work. Since its inception in 1999, it has evolved as an ultimate platform for techno maniacs.
               </p>
@@ -54,7 +54,7 @@ export default function About() {
         </div>
 
         {/* Right side - Globe */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] flex items-center justify-center">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] flex items-center justify-center opacity-20 lg:opacity-100">
           <Globe
             dark
             baseColor="#777A80"

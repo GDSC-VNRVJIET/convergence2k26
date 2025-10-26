@@ -37,18 +37,18 @@ export default function Clubs() {
   ];
 
   return (
-    <StarsBackground className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
+    <StarsBackground className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-20">
       <section className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-white">
             Organised by
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Convergence 2K26 is brought to you by 30+ student clubs and technical societies working together to create an unforgettable experience
           </p>
         </div>
 
-        <div className="relative w-full" style={{ height: '700px' }}>
+        <div className="relative w-full" style={{ height: '400px' }}>
           <DomeGallery
             images={clubImages}
             fit={0.6}
@@ -69,8 +69,8 @@ export default function Clubs() {
           />
         </div>
 
-        <div className="text-center mt-8">
-          <p className="text-cyan-400 text-sm">
+        <div className="text-center mt-6 sm:mt-8">
+          <p className="text-cyan-400 text-xs sm:text-sm">
             Drag to explore • Click to enlarge
           </p>
         </div>

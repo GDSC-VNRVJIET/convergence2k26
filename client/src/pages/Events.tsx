@@ -35,17 +35,17 @@ export default function Events() {
   ]
 
   return (
-    <StarsBackground className="min-h-screen flex items-center justify-center px-6 py-20">
+    <StarsBackground className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20">
       <div className="max-w-6xl mx-auto w-full relative z-10">
-        <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white text-center">Events</h2>
-        <p className="text-gray-400 text-center mb-12 text-lg">Exciting activities designed to challenge and inspire</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-white text-center">Events</h2>
+        <p className="text-gray-400 text-center mb-8 sm:mb-12 text-base sm:text-lg px-2">Exciting activities designed to challenge and inspire</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {events.map((e) => (
-            <div key={e.title} className="group p-8 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-              <div className="text-5xl mb-4">{e.icon}</div>
-              <h4 className="text-2xl font-bold mb-3 text-white">{e.title}</h4>
-              <p className="text-gray-400 leading-relaxed">{e.desc}</p>
+            <div key={e.title} className="group p-6 sm:p-8 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">{e.icon}</div>
+              <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white">{e.title}</h4>
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{e.desc}</p>
             </div>
           ))}
         </div>
