@@ -32,82 +32,82 @@ function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   };
 
-  const timeLeft = calculateTimeLeft();
+  // const timeLeft = calculateTimeLeft();
 
-  const totalEvents = eventCategories.reduce((total, category) => {
-    return total + (eventsDatabase[category.id]?.length || 0);
-  }, 0);
-
-  return (
-    <div className="p-6 mb-4 mx-4 mt-6">
-      {/* Mobile Timer Header */}
-      <div className="text-center mb-4">
-        <h2 className="text-xl font-bold text-cyan-400 font-orbitron mb-2 glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
-          CONVERGENCE 2K26
-        </h2>
-        <div className="text-cyan-300/70 font-rajdhani text-sm" style={{ color: '#4dd0e1' }}>
-          Nov 3rd, 2025 • 9:00 PM
-        </div>
-      </div>
-
-      {/* Mobile Countdown - Compact Grid */}
-      <div className="grid grid-cols-4 gap-3 mb-4">
-        <div className="text-center">
-          <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
-            {timeLeft.days.toString().padStart(2, '0')}
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
-            Days
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
-            {timeLeft.hours.toString().padStart(2, '0')}
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
-            Hrs
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
-            {timeLeft.minutes.toString().padStart(2, '0')}
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
-            Mins
-          </div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold text-cyan-400 font-orbitron animate-pulse glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
-            {timeLeft.seconds.toString().padStart(2, '0')}
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
-            Secs
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Stats */}
-      <div className="flex justify-between text-center border-t border-cyan-500/30 pt-3">
-        <div>
-          <div className="text-lg font-bold text-cyan-400 font-orbitron">
-            {totalEvents}
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase">
-            Events
-          </div>
-        </div>
-        <div>
-          <div className="text-lg font-bold text-green-400 font-orbitron">
-            OPEN
-          </div>
-          <div className="text-cyan-300/70 font-rajdhani text-xs uppercase">
-            Registration
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  // const totalEvents = eventCategories.reduce((total, category) => {
+  //   return total + (eventsDatabase[category.id]?.length || 0);
+  // }, 0);
 }
+  // return (
+//     <div className="p-6 mb-4 mx-4 mt-6">
+//       {/* Mobile Timer Header */}
+//       <div className="text-center mb-4">
+//         <h2 className="text-xl font-bold text-cyan-400 font-orbitron mb-2 glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
+//           CONVERGENCE 2K26
+//         </h2>
+//         <div className="text-cyan-300/70 font-rajdhani text-sm" style={{ color: '#4dd0e1' }}>
+//           Nov 3rd, 2025 • 9:00 PM
+//         </div>
+//       </div>
+
+//       {/* Mobile Countdown - Compact Grid */}
+//       <div className="grid grid-cols-4 gap-3 mb-4">
+//         <div className="text-center">
+//           <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
+//             {timeLeft.days.toString().padStart(2, '0')}
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
+//             Days
+//           </div>
+//         </div>
+//         <div className="text-center">
+//           <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
+//             {timeLeft.hours.toString().padStart(2, '0')}
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
+//             Hrs
+//           </div>
+//         </div>
+//         <div className="text-center">
+//           <div className="text-3xl font-bold text-cyan-400 font-orbitron glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
+//             {timeLeft.minutes.toString().padStart(2, '0')}
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
+//             Mins
+//           </div>
+//         </div>
+//         <div className="text-center">
+//           <div className="text-3xl font-bold text-cyan-400 font-orbitron animate-pulse glow-text" style={{ color: '#00bcd4', textShadow: '0 0 20px rgba(6, 182, 212, 0.8)' }}>
+//             {timeLeft.seconds.toString().padStart(2, '0')}
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase" style={{ color: '#4dd0e1' }}>
+//             Secs
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Mobile Stats */}
+//       <div className="flex justify-between text-center border-t border-cyan-500/30 pt-3">
+//         <div>
+//           <div className="text-lg font-bold text-cyan-400 font-orbitron">
+//             {totalEvents}
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase">
+//             Events
+//           </div>
+//         </div>
+//         <div>
+//           <div className="text-lg font-bold text-green-400 font-orbitron">
+//             OPEN
+//           </div>
+//           <div className="text-cyan-300/70 font-rajdhani text-xs uppercase">
+//             Registration
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 // Left Column Component with Countdown
 function LeftEventColumn({ eventCategories }: { eventCategories: any[] }) {
@@ -285,14 +285,13 @@ export default function Events() {
             factor={0.02}
           />
           
-          {/* Mobile Countdown Timer */}
-          <MobileCountdown eventCategories={eventCategories} />
+          {/* Mobile Countdown Timer removed as per request */}
           
           {/* Mobile Event Control Panel */}
           <EventControlPanel eventCategories={eventCategories} />
         </div>
       ) : (
-        // Desktop: Use Integrated Cockpit View with Equal Split
+        // Desktop: Full Width with Countdown Timer
         <div className="relative min-h-screen">
           {/* Full screen stars background */}
           <StarsBackground 
@@ -301,6 +300,8 @@ export default function Events() {
             speed={60}
             factor={0.02}
           />
+          
+          {/* Desktop Countdown Timer removed as per request */}
           
           {/* Desktop Layout - Full Width Control Panel */}
           <div className="relative">
