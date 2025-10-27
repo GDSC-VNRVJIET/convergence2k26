@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import Shuffle from '../components/Shuffle'
-import Astronaut3D from '../components/Astronaut3D'
 
 interface HomeProps {
   showIntroAnimation?: boolean
@@ -22,13 +21,19 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
 
   return (
     <section className="relative w-full text-white overflow-hidden min-h-screen">
-      {/* Gradient background - only for home page */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-950 z-0"></div>
-
-      {/* Spline Astronaut 3D Model Background - only for home page */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-10">
-        <Astronaut3D />
-      </div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/home.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30 z-10"></div>
       
       <div className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-20 sm:py-24 z-20">
         <div className="mb-6 sm:mb-8">
