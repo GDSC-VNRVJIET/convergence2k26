@@ -3,41 +3,8 @@ import EventControlPanel from '@/components/EventControlPanel';
 import { StarsBackground } from '@/components/StarsBackground';
 import { eventCategories, eventsDatabase } from '@/data/eventsData';
 
-// Mobile Countdown Component
-function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  // Set event date to November 3rd, 2025 at 9:00 PM
-  const eventDate = new Date('2025-11-03T21:00:00');
-  
-  const calculateTimeLeft = () => {
-    const difference = eventDate.getTime() - currentTime.getTime();
-    
-    if (difference > 0) {
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
-      };
-    }
-    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  };
-
-  // const timeLeft = calculateTimeLeft();
-
-  // const totalEvents = eventCategories.reduce((total, category) => {
-  //   return total + (eventsDatabase[category.id]?.length || 0);
-  // }, 0);
-}
+// Mobile Countdown Component - Commented out as it's not being used
+// function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
   // return (
 //     <div className="p-6 mb-4 mx-4 mt-6">
 //       {/* Mobile Timer Header */}
@@ -109,8 +76,9 @@ function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
 //   );
 // }
 
-// Left Column Component with Countdown
-function LeftEventColumn({ eventCategories }: { eventCategories: any[] }) {
+// Left Column Component with Countdown - Not currently used
+// @ts-expect-error - Function defined but not currently used
+function LeftEventColumn() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [prevSeconds, setPrevSeconds] = useState(0);
 

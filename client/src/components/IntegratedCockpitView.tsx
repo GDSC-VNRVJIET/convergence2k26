@@ -1,6 +1,6 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls, Environment, useGLTF, Center, Html } from '@react-three/drei'
-import { Suspense, useRef, useEffect, useState } from 'react'
+import { Suspense, useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { StarsBackground } from './StarsBackground'
 import EventControlPanel from './EventControlPanel'
@@ -11,12 +11,12 @@ function HoloDeskModel({ targetReached }: { targetReached: boolean }) {
   const { scene } = useGLTF('/holo_desk.glb')
   const deskRef = useRef<any>(null)
   
-  useFrame((state) => {
+  useFrame(() => {
     if (deskRef.current) {
       // Desk movement from commented code: simple forward and down
       const baseY = -1
       const targetY = targetReached ? -1.5 : baseY // Move down when zoomed
-      const currentY = targetY + Math.sin(state.clock.elapsedTime * 0.5) * 0.01
+      const currentY = targetY
       
       deskRef.current.position.y = currentY
       
@@ -42,15 +42,13 @@ function HoloDeskModel({ targetReached }: { targetReached: boolean }) {
 
 // Complete Cockpit Control Station - positioned above desk
 function CockpitControlStation({ 
-  eventCategories, 
-  targetReached 
+  eventCategories
 }: { 
   eventCategories: any[]
-  targetReached: boolean 
 }) {
   const groupRef = useRef<THREE.Group>(null)
   
-  useFrame((state) => {
+  useFrame(() => {
     if (groupRef.current) {
       // Fixed position: always above the desk for consistent access
       const fixedPosition = new THREE.Vector3(0.5, 1.3, 3)
@@ -192,12 +190,10 @@ function StudioLighting() {
 
 interface IntegratedCockpitViewProps {
   eventCategories: any[]
-  onCategorySelect?: (categoryId: string) => void
 }
 
 export default function IntegratedCockpitView({ 
-  eventCategories, 
-  onCategorySelect
+  eventCategories
 }: IntegratedCockpitViewProps) {
   const [isZooming, setIsZooming] = useState(false)
   const [targetReached, setTargetReached] = useState(false)
@@ -253,7 +249,6 @@ export default function IntegratedCockpitView({
               {/* Control Panel (switches + monitor) positioned above desk */}
               <CockpitControlStation
                 eventCategories={eventCategories}
-                targetReached={targetReached}
               />
               
               {/* Camera Animation */}
