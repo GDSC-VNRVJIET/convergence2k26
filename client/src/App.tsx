@@ -175,7 +175,7 @@ function App() {
           <section
             id="contact"
             ref={(el) => { sectionsRef.current.contact = el }}
-            className="min-h-screen snap-start"
+            className="snap-start bg-black"
           >
             <Contact />
           </section>

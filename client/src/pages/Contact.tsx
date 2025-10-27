@@ -1,6 +1,7 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import { StarsBackground } from "@/components/StarsBackground";
 import { motion } from "motion/react";
+import { Marquee } from "@/components/ui/marquee";
 
 export default function Contact() {
   const contacts = [
@@ -10,16 +11,53 @@ export default function Contact() {
     { name: "Manoj", phone: "+91 9010303229", role: "Marketing Lead" },
   ];
 
+  const ContactCard = ({ name, phone, role }: { name: string; phone: string; role: string }) => {
+    return (
+      <div className="group relative w-72 flex-shrink-0">
+        <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300">
+          {/* Content */}
+          <div className="relative z-10">
+            {/* Avatar Circle */}
+            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-white/20 transition-colors duration-300">
+              <span className="text-2xl font-bold text-white">
+                {name.charAt(0)}
+              </span>
+            </div>
+
+            {/* Name */}
+            <h3 className="text-xl font-bold text-white mb-2 text-center">
+              {name}
+            </h3>
+
+            {/* Role */}
+            <p className="text-sm text-gray-400 mb-4 text-center">
+              {role}
+            </p>
+
+            {/* Phone */}
+            <a 
+              href={`tel:${phone}`}
+              className="flex items-center justify-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+            >
+              <FaPhone className="text-xs" />
+              <span>{phone}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <StarsBackground className="min-h-screen flex items-center justify-center py-8 sm:py-12 pb-4 sm:pb-6 px-4 text-white">
-      <div className="max-w-6xl mx-auto w-full relative z-10">
+    <StarsBackground className="w-full flex flex-col items-center justify-start px-4 sm:px-6 pt-16 sm:pt-20 pb-8">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-10"
+          className="text-center mb-6 sm:mb-8"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-white">
             Contact Us
@@ -29,95 +67,16 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8">
-          {contacts.map((contact, index) => (
-            <motion.div
-              key={contact.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="group relative"
-            >
-              <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-white/30 transition-all duration-300">
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Avatar Circle */}
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3 mx-auto group-hover:bg-white/20 transition-colors duration-300">
-                    <span className="text-xl font-bold text-white">
-                      {contact.name.charAt(0)}
-                    </span>
-                  </div>
-
-                  {/* Name */}
-                  <h3 className="text-lg font-bold text-white mb-1 text-center">
-                    {contact.name}
-                  </h3>
-
-                  {/* Role */}
-                  <p className="text-xs text-gray-400 mb-3 text-center">
-                    {contact.role}
-                  </p>
-
-                  {/* Phone */}
-                  <a 
-                    href={`tel:${contact.phone}`}
-                    className="flex items-center justify-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    <FaPhone className="text-xs" />
-                    <span>{contact.phone}</span>
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        {/* Contact Cards Marquee */}
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {contacts.map((contact) => (
+              <ContactCard key={contact.name} {...contact} />
+            ))}
+          </Marquee>
+          <div className="from-black pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+          <div className="from-black pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
         </div>
-
-        {/* Additional Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto"
-        >
-          {/* Email Card */}
-          <motion.div
-            whileHover={{ y: -3 }}
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-white/30 transition-all duration-300"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                <FaEnvelope className="text-white text-sm" />
-              </div>
-              <h3 className="text-base font-bold text-white">Email</h3>
-            </div>
-            <a 
-              href="mailto:convergence@vnrvjiet.ac.in" 
-              className="text-gray-300 hover:text-white transition-colors text-sm pl-13"
-            >
-              convergence@vnrvjiet.ac.in
-            </a>
-          </motion.div>
-
-          {/* Location Card */}
-          <motion.div
-            whileHover={{ y: -3 }}
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-white/30 transition-all duration-300"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                <FaMapMarkerAlt className="text-white text-sm" />
-              </div>
-              <h3 className="text-base font-bold text-white">Location</h3>
-            </div>
-            <p className="text-gray-300 text-sm pl-13">
-              VNR VJIET, Hyderabad
-            </p>
-          </motion.div>
-        </motion.div>
       </div>
     </StarsBackground>
   );
