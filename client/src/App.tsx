@@ -90,7 +90,7 @@ function App() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col text-white bg-black">
+    <div className="min-h-screen flex flex-col text-white ">
       {/* Landing Video */}
       {showLanding && <LandingVideo onComplete={handleLandingComplete} />}
 
@@ -131,7 +131,7 @@ function App() {
 
       {/* main scrollable area with snap */}
       {!showLanding && (
-        <main className="flex-1 overflow-y-auto snap-y snap-mandatory h-screen bg-black">
+        <main className="flex-1 overflow-y-auto snap-y snap-mandatory h-screen">
           <section
             id="home"
             ref={(el) => { sectionsRef.current.home = el }}

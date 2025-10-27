@@ -242,7 +242,7 @@ function DisplayScreen({ activeCategories, selectedCategory, eventCategories, se
               <div className="text-center mb-4 md:mb-6">
                 <h1 className="text-xl md:text-3xl font-bold mb-2 md:mb-3">
                   <span className="text-cyan-400 font-mono">CONVERGENCE</span>{' '}
-                  <span className="text-cyan-300">2K26</span>
+                  <span className="text-cyan-300">2K25R</span>
                 </h1>
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-2 md:mb-3"></div>
                 <p className="text-cyan-300/80 font-mono text-sm">

@@ -1,7 +1,7 @@
-// import VantaGlobe from '../components/VantaGlobe'
 import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import Shuffle from '../components/Shuffle'
+import Astronaut3D from '../components/Astronaut3D'
 
 interface HomeProps {
   showIntroAnimation?: boolean
@@ -21,13 +21,16 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
   }, [])
 
   return (
-    <section className="relative w-full text-white bg-black">
-      {/* Fullscreen Vanta Globe background - Temporarily disabled */}
-      {/* <div className="fixed inset-0 -z-10">
-        <VantaGlobe color={0x29b6f6} backgroundColor={0x000000} />
-      </div> */}
+    <section className="relative w-full text-white overflow-hidden min-h-screen">
+      {/* Gradient background - only for home page */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-950 z-0"></div>
 
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-20 sm:py-24">
+      {/* Spline Astronaut 3D Model Background - only for home page */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-10">
+        <Astronaut3D />
+      </div>
+      
+      <div className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-20 sm:py-24 z-20">
         <div className="mb-6 sm:mb-8">
           {showIntroAnimation ? (
             // "Flash and Form" Animation - Light converts to text
@@ -44,28 +47,29 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
               }}
               transition={{ 
                 duration: isMobile ? 0.5 : 1,
-                ease: [0.22, 1, 0.36, 1], // Custom easing for smooth deblur
-                delay: isMobile ? 0 : 0.3 // No delay on mobile
+                ease: [0.22, 1, 0.36, 1],
+                delay: isMobile ? 0 : 0.3
               }}
-              className="text-[40px] sm:text-[70px] md:text-[110px] lg:text-[140px] font-black tracking-tight leading-none text-white text-center"
+              className="text-[40px] sm:text-[70px] md:text-[110px] lg:text-[140px] font-black tracking-tight leading-none text-white text-center drop-shadow-2xl"
               style={{
                 fontFamily: "'Audiowide', system-ui, sans-serif",
                 letterSpacing: '0.05em',
-                textShadow: isMobile ? 'none' : '0 0 30px rgba(255, 255, 255, 0.5)', // No glow on mobile
+                textShadow: isMobile ? '0 4px 12px rgba(0, 0, 0, 0.5)' : '0 0 30px rgba(255, 255, 255, 0.5), 0 4px 12px rgba(0, 0, 0, 0.5)',
               }}
             >
-              CONVERGENCE 2K26
+              CONVERGENCE 2K25R
             </motion.h1>
           ) : (
             // Regular Shuffle animation for subsequent views
             <Shuffle
               key={windowWidth}
-              text="CONVERGENCE 2K26"
+              text="CONVERGENCE 2K25R"
               tag="h1"
-              className="text-[40px] sm:text-[70px] md:text-[110px] lg:text-[140px] font-black tracking-tight leading-none text-white text-center"
+              className="text-[40px] sm:text-[70px] md:text-[110px] lg:text-[140px] font-black tracking-tight leading-none text-white text-center drop-shadow-2xl"
               style={{
                 fontFamily: "'Audiowide', system-ui, sans-serif",
-                letterSpacing: '0.05em'
+                letterSpacing: '0.05em',
+                textShadow: '0 4px 12px rgba(0, 0, 0, 0.5)'
               }}
               shuffleDirection="right"
               duration={0.35}
@@ -85,10 +89,13 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
             duration: 0.6,
-            delay: showIntroAnimation ? (isMobile ? 0.3 : 1.0) : 0, // Faster on mobile
+            delay: showIntroAnimation ? (isMobile ? 0.3 : 1.0) : 0,
             ease: 'easeOut'
           }}
-          className="text-base sm:text-xl md:text-2xl text-gray-300/90 mb-8 sm:mb-10 max-w-3xl text-center font-normal px-2"
+          className="text-base sm:text-xl md:text-2xl text-gray-100 mb-8 sm:mb-10 max-w-3xl text-center font-normal px-2 drop-shadow-lg"
+          style={{
+            textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)'
+          }}
         >
           The ultimate celebration of tech, creativity and collaboration — workshops, talks and competitions.
         </motion.h2>
@@ -98,15 +105,15 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
             duration: 0.6,
-            delay: showIntroAnimation ? (isMobile ? 0.5 : 1.3) : 0, // Faster on mobile
+            delay: showIntroAnimation ? (isMobile ? 0.5 : 1.3) : 0,
             ease: 'easeOut'
           }}
           className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto px-4 sm:px-0"
         >
-          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200 text-sm sm:text-base">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold bg-white/15 backdrop-blur-md border border-white/30 hover:bg-white/25 hover:border-white/50 transition-all duration-200 text-sm sm:text-base shadow-lg">
             Register Now
           </button>
-          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold border border-white/20 hover:border-white/40 transition-all duration-200 text-sm sm:text-base">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold bg-white/5 backdrop-blur-md border border-white/30 hover:bg-white/15 hover:border-white/50 transition-all duration-200 text-sm sm:text-base shadow-lg">
             Learn More
           </button>
         </motion.div>
