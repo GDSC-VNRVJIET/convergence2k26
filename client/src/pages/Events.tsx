@@ -1,11 +1,45 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import EventControlPanel from '@/components/EventControlPanel';
+import SpaceGateVault from '@/components/SpaceGate';
 import { StarsBackground } from '@/components/StarsBackground';
 import { eventCategories, eventsDatabase } from '@/data/eventsData';
 
-// Mobile Countdown Component - Commented out as it's not being used
-// function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
-  // return (
+// Mobile Countdown Component
+function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Set event date to November 3rd, 2025 at 9:00 PM
+  const eventDate = new Date('2025-11-03T21:00:00');
+
+  const calculateTimeLeft = () => {
+    const difference = eventDate.getTime() - currentTime.getTime();
+
+    if (difference > 0) {
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    }
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  };
+
+  // const timeLeft = calculateTimeLeft();
+
+  // const totalEvents = eventCategories.reduce((total, category) => {
+  //   return total + (eventsDatabase[category.id]?.length || 0);
+  // }, 0);
+}
+// return (
 //     <div className="p-6 mb-4 mx-4 mt-6">
 //       {/* Mobile Timer Header */}
 //       <div className="text-center mb-4">
@@ -92,10 +126,10 @@ function LeftEventColumn() {
 
   // Set event date to November 3rd, 2025 at 9:00 PM
   const eventDate = new Date('2025-11-03T21:00:00');
-  
+
   const calculateTimeLeft = () => {
     const difference = eventDate.getTime() - currentTime.getTime();
-    
+
     if (difference > 0) {
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -108,7 +142,7 @@ function LeftEventColumn() {
   };
 
   const timeLeft = calculateTimeLeft();
-  
+
   // Track seconds change for flip effect
   useEffect(() => {
     if (timeLeft.seconds !== prevSeconds) {
@@ -128,7 +162,7 @@ function LeftEventColumn() {
         <div className="absolute inset-0">
           <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-scan-line"></div>
         </div>
-        
+
         {/* Grid overlay */}
         <div className="absolute inset-0 opacity-10 grid-bg"></div>
       </div>
@@ -144,7 +178,7 @@ function LeftEventColumn() {
               Total Events
             </div>
           </div>
-          
+
           <div className="bg-black/20 backdrop-blur-sm border border-green-500/30 rounded-lg px-4 py-2 animate-slideInRight">
             <div className="text-2xl font-bold text-green-400 font-orbitron animate-pulse">
               OPEN
@@ -157,7 +191,7 @@ function LeftEventColumn() {
       </div>
 
       {/* Countdown Display - Horizontal */}
-<div className="flex-1 flex flex-col justify-center px-4">
+      <div className="flex-1 flex flex-col justify-center px-4">
         {/* Timer */}
         <div className="flex justify-center items-center space-x-6 animate-fadeInUp">
           {/* Days */}
@@ -226,57 +260,70 @@ function LeftEventColumn() {
 }
 
 export default function Events() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [shouldStartAnimation, setShouldStartAnimation] = useState(false);
+  const [showGate, setShowGate] = useState(true);
+  const [hasTriggered, setHasTriggered] = useState(false);
+  const eventsRef = useRef<HTMLDivElement>(null);
 
+  // Intersection Observer to trigger SpaceGate animation when events section is fully visible
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Only trigger when the entire events section is visible (threshold: 0.8)
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.8 && !hasTriggered) {
+            setHasTriggered(true);
+            setShouldStartAnimation(true);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.8 // Trigger when 80% of events section is visible
+      }
+    );
+
+    if (eventsRef.current) {
+      observer.observe(eventsRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
     };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  }, [hasTriggered]);
 
   return (
-    <div className="relative">
-      {/* Responsive Events View */}
-      {isMobile ? (
-        // Mobile: Use Control Panel with Countdown Timer
-        <div className="relative min-h-screen">
-          {/* Mobile Background */}
-          <StarsBackground 
-            className="absolute inset-0"
-            starColor="#00ffff"
-            speed={60}
-            factor={0.02}
-          />
-          
-          {/* Mobile Countdown Timer removed as per request */}
-          
-          {/* Mobile Event Control Panel */}
+    <div ref={eventsRef} className="relative">
+      {/* Universal Stars Background - always visible */}
+      <StarsBackground
+        className="absolute inset-0"
+        starColor="#00ffff"
+        speed={60}
+        factor={0.02}
+      />
+
+      {/* Events Section Content */}
+      <div className="relative z-10 min-h-screen">
+        {/* EventControlPanel - always present in background */}
+        <div className="relative z-10">
           <EventControlPanel eventCategories={eventCategories} />
         </div>
-      ) : (
-        // Desktop: Full Width with Countdown Timer
-        <div className="relative min-h-screen">
-          {/* Full screen stars background */}
-          <StarsBackground 
-            className="absolute inset-0"
-            starColor="#00ffff"
-            speed={60}
-            factor={0.02}
-          />
-          
-          {/* Desktop Countdown Timer removed as per request */}
-          
-          {/* Desktop Layout - Full Width Control Panel */}
-          <div className="relative">
-            <EventControlPanel eventCategories={eventCategories} />
+
+        {/* SpaceGate Animation - covers the EventControlPanel initially */}
+        {showGate && (
+          <div className="absolute inset-0 z-20">
+            <SpaceGateVault
+              shouldStartAnimation={shouldStartAnimation}
+              onAnimationComplete={() => {
+                // Gate animation complete - completely remove gate
+                setShowGate(false);
+              }}
+            />
           </div>
-          
-          <style>{`
+        )}
+      </div>
+
+      <style>{`
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
             
             .font-orbitron {
@@ -401,8 +448,6 @@ export default function Events() {
               background-size: 40px 40px;
             }
           `}</style>
-        </div>
-      )}
     </div>
   )
 }

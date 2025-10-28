@@ -56,7 +56,7 @@ const VintageCRTMonitor: React.FC<VintageCRTMonitorProps> = ({ children, isPower
           className="absolute top-2 md:top-3 right-2 md:right-12 px-2 md:px-3 py-1 rounded text-xs font-bold"
           style={{
             background: 'linear-gradient(145deg, rgb(10, 10, 10), rgb(5, 5, 5))',
-            color: 'rgb(0, 255, 255)',
+            color: 'rgb(255, 255, 255)',
             boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.8)',
             letterSpacing: '1px'
           }}
@@ -82,7 +82,7 @@ const VintageCRTMonitor: React.FC<VintageCRTMonitorProps> = ({ children, isPower
                 ? 'radial-gradient(ellipse at center, rgb(0, 0, 0), rgb(5, 5, 5))'
                 : 'radial-gradient(ellipse at center, rgb(30, 30, 30), rgb(15, 15, 15))',
               boxShadow: isPoweredOn
-                ? 'inset 0 0 50px rgba(0, 255, 255, 0.1), inset 0 4px 20px rgba(0,0,0,0.9), 0 0 30px rgba(0, 255, 255, 0.05)'
+                ? 'inset 0 0 50px rgba(255, 255, 255, 0.1), inset 0 4px 20px rgba(0,0,0,0.9), 0 0 30px rgba(255, 255, 255, 0.05)'
                 : 'inset 0 4px 20px rgba(0,0,0,0.9)',
               borderRadius: 'clamp(4px, 1vw, 8px)',
               // Outward curve effect using border-radius and transform
@@ -134,7 +134,7 @@ const VintageCRTMonitor: React.FC<VintageCRTMonitorProps> = ({ children, isPower
                 <div 
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    boxShadow: 'inset 0 0 100px rgba(0, 255, 255, 0.03)',
+                    boxShadow: 'inset 0 0 100px rgba(255, 255, 255, 0.03)',
                     animation: 'flicker 3s infinite'
                   }}
                 ></div>
@@ -153,10 +153,10 @@ const VintageCRTMonitor: React.FC<VintageCRTMonitorProps> = ({ children, isPower
           className="absolute bottom-6 right-12 w-3 h-3 rounded-full"
           style={{
             background: isPoweredOn 
-              ? 'radial-gradient(circle, rgb(100, 255, 255), rgb(0, 200, 255))'
+              ? 'radial-gradient(circle, rgb(255, 255, 255), rgb(200, 200, 200))'
               : 'radial-gradient(circle, rgb(100, 50, 50), rgb(50, 20, 20))',
             boxShadow: isPoweredOn 
-              ? '0 0 10px rgb(0, 255, 255), 0 0 20px rgba(0, 255, 255, 0.5)'
+              ? '0 0 10px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.5)'
               : 'inset 0 1px 3px rgba(0,0,0,0.8)',
             transition: 'all 0.5s'
           }}
@@ -217,31 +217,31 @@ const VintageCRTMonitor: React.FC<VintageCRTMonitorProps> = ({ children, isPower
         }
         
         .crt-scrollbar::-webkit-scrollbar-track {
-          background: rgba(0, 20, 20, 0.8);
+          background: rgba(20, 20, 20, 0.8);
           border-radius: 2px;
-          border: 1px solid rgba(0, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .crt-scrollbar::-webkit-scrollbar-thumb {
-          background: linear-gradient(180deg, rgba(0, 255, 255, 0.6), rgba(0, 200, 255, 0.4));
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(200, 200, 200, 0.4));
           border-radius: 2px;
-          border: 1px solid rgba(0, 255, 255, 0.3);
-          box-shadow: 0 0 3px rgba(0, 255, 255, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
         }
         
         .crt-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(180deg, rgba(0, 255, 255, 0.8), rgba(0, 200, 255, 0.6));
-          box-shadow: 0 0 4px rgba(0, 255, 255, 0.4);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.6));
+          box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
         }
 
         .crt-scrollbar::-webkit-scrollbar-corner {
-          background: rgba(0, 20, 20, 0.8);
+          background: rgba(20, 20, 20, 0.8);
         }
 
         /* Firefox scrollbar styling */
         .crt-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: rgba(0, 255, 255, 0.6) rgba(0, 20, 20, 0.8);
+          scrollbar-color: rgba(255, 255, 255, 0.6) rgba(20, 20, 20, 0.8);
         }
       `}</style>
     </div>
@@ -256,8 +256,8 @@ const CRTDemo: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center justify-center p-8 gap-8">
       <VintageCRTMonitor isPoweredOn={isPoweredOn}>
         {/* Your custom content goes here */}
-        <div className="flex flex-col gap-4 text-cyan-400 font-mono">
-          <div className="text-2xl font-bold mb-4" style={{ textShadow: '0 0 10px rgba(0, 255, 255, 0.5)' }}>
+        <div className="flex flex-col gap-4 text-white font-mono">
+          <div className="text-2xl font-bold mb-4" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }}>
             {'> SYSTEM READY_'}
           </div>
           
@@ -267,7 +267,7 @@ const CRTDemo: React.FC = () => {
             <p>{'[OK] DISPLAY INITIALIZED'}</p>
           </div>
 
-          <div className="mt-6 p-4 border border-cyan-400 border-opacity-30 rounded">
+          <div className="mt-6 p-4 border border-gray-400 border-opacity-30 rounded">
             <p className="text-xs mb-2">{'MISSION CONTROL STATUS:'}</p>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div>TEMP: 72°F</div>
@@ -299,7 +299,7 @@ const CRTDemo: React.FC = () => {
           <p className="text-gray-400">{'// Pass any content as children - it will display inside the screen'}</p>
           <br />
           <p>{'<VintageCRTMonitor isPoweredOn={true}>'}</p>
-          <p className="ml-4">{'<div className="text-cyan-400">'}</p>
+          <p className="ml-4">{'<div className="text-white">'}</p>
           <p className="ml-8">{'<h1>Your Custom Content</h1>'}</p>
           <p className="ml-8">{'<p>Any HTML/React elements work here</p>'}</p>
           <p className="ml-4">{'</div>'}</p>
