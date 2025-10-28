@@ -19,6 +19,13 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  const handleLearnMore = () => {
+    const aboutSection = document.getElementById('about')
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section className="relative w-full text-white overflow-hidden min-h-screen">
       {/* Video Background */}
@@ -115,10 +122,19 @@ export default function Home({ showIntroAnimation = false }: HomeProps) {
           }}
           className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto px-4 sm:px-0"
         >
-          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold bg-white/15 backdrop-blur-md border border-white/30 hover:bg-white/25 hover:border-white/50 transition-all duration-200 text-sm sm:text-base shadow-lg">
+          <button 
+            onClick={() => window.open('https://axisbpayments.razorpay.com/pl_Pq0BHPyKE4qna8/view', '_blank')}
+            className="px-6 sm:px-8 py-4 sm:py-4 rounded-lg text-white font-bold bg-white/30 backdrop-blur-md border-2 border-white/50 hover:bg-white/40 hover:border-white/70 transition-all duration-200 text-base sm:text-base shadow-xl"
+            style={{
+              textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)'
+            }}
+          >
             Register Now
           </button>
-          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold bg-white/5 backdrop-blur-md border border-white/30 hover:bg-white/15 hover:border-white/50 transition-all duration-200 text-sm sm:text-base shadow-lg">
+          <button 
+            onClick={handleLearnMore}
+            className="px-6 sm:px-8 py-4 sm:py-4 rounded-lg text-white font-semibold bg-white/10 backdrop-blur-md border-2 border-white/40 hover:bg-white/20 hover:border-white/60 transition-all duration-200 text-base sm:text-base shadow-lg"
+          >
             Learn More
           </button>
         </motion.div>

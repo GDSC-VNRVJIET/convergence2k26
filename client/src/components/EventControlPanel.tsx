@@ -640,7 +640,7 @@ function CRTEventDetailModal({ event, onBack, showBackToEvents, selectedCategory
 
         {/* Register Button */}
         <button 
-          onClick={() => window.open(event.registerUrl, '_blank')}
+          onClick={() => window.open('https://axisbpayments.razorpay.com/pl_Pq0BHPyKE4qna8/view', '_blank')}
           className="w-full bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400 text-cyan-400 font-mono font-bold py-3 px-6 rounded transition-all"
         >
           {'>'} REGISTER NOW
