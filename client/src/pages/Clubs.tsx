@@ -2,38 +2,54 @@ import DomeGallery from '../components/DomeGallery';
 import { StarsBackground } from '@/components/StarsBackground';
 
 export default function Clubs() {
-  // 30+ club logos - using placeholder images for now
+  // 46 club logos - Update these paths after downloading images locally
   const clubImages = [
-    { src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=400&fit=crop', alt: 'ACM' },
-    { src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop', alt: 'ASME' },
-    { src: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop', alt: 'CSI' },
-    { src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop', alt: 'DATAQUESTERS' },
-    { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop', alt: 'GDGC' },
-    { src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop', alt: 'GV' },
-    { src: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=400&fit=crop', alt: 'ICI' },
-    { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop', alt: 'IE' },
-    { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop', alt: 'IEEE' },
-    { src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop', alt: 'IEEE CASS' },
-    { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop', alt: 'IEEE CS' },
-    { src: 'https://images.unsplash.com/photo-1635070041409-e63e783b9f87?w=400&h=400&fit=crop', alt: 'IEEE NANO' },
-    { src: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=400&fit=crop', alt: 'IEEE PES' },
-    { src: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=400&fit=crop', alt: 'IEEE SENSORS' },
-    { src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop', alt: 'IEEE SPS' },
-    { src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop', alt: 'IEEE WIE' },
-    { src: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&h=400&fit=crop', alt: 'IEEE MTT' },
-    { src: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop', alt: 'IETE' },
-    { src: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=400&h=400&fit=crop', alt: 'IGBC' },
-    { src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop', alt: 'ISOI' },
-    { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&fit=crop', alt: 'ISTE' },
-    { src: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop', alt: 'IUCEE' },
-    { src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop', alt: 'Krithomedh' },
-    { src: 'https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=400&h=400&fit=crop', alt: 'MIH' },
-    { src: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop', alt: 'SAE' },
-    { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=400&fit=crop', alt: 'TURING HUT' },
-    { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop', alt: 'VJ ARC' },
-    { src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=400&fit=crop', alt: 'Tech Club 1' },
-    { src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop', alt: 'Tech Club 2' },
-    { src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=400&fit=crop', alt: 'Tech Club 3' },
+    { src: '/clubs/club-08.png', alt: 'Club 8' },
+    { src: '/clubs/club-01.png', alt: 'Club 1' },
+    { src: '/clubs/club-02.png', alt: 'Club 2' },
+    { src: '/clubs/club-03.png', alt: 'Club 3' },
+    { src: '/clubs/club-04.png', alt: 'Club 4' },
+    { src: '/clubs/club-05.png', alt: 'Club 5' },
+    { src: '/clubs/club-06.png', alt: 'Club 6' },
+    { src: '/clubs/club-07.png', alt: 'Club 7' },
+    { src: '/clubs/club-09.png', alt: 'Club 9' },
+    { src: '/clubs/club-10.png', alt: 'Club 10' },
+    { src: '/clubs/club-11.png', alt: 'Club 11' },
+    { src: '/clubs/club-12.png', alt: 'Club 12' },
+    { src: '/clubs/club-13.png', alt: 'Club 13' },
+    { src: '/clubs/club-14.png', alt: 'Club 14' },
+    { src: '/clubs/club-15.png', alt: 'Club 15' },
+    { src: '/clubs/club-16.png', alt: 'Club 16' },
+    { src: '/clubs/club-17.png', alt: 'Club 17' },
+    { src: '/clubs/club-18.png', alt: 'Club 18' },
+    { src: '/clubs/club-19.png', alt: 'Club 19' },
+    { src: '/clubs/club-20.png', alt: 'Club 20' },
+    { src: '/clubs/club-21.png', alt: 'Club 21' },
+    { src: '/clubs/club-22.png', alt: 'Club 22' },
+    { src: '/clubs/club-23.png', alt: 'Club 23' },
+    { src: '/clubs/club-24.png', alt: 'Club 24' },
+    { src: '/clubs/club-25.png', alt: 'Club 25' },
+    { src: '/clubs/club-26.png', alt: 'Club 26' },
+    { src: '/clubs/club-27.png', alt: 'Club 27' },
+    { src: '/clubs/club-28.png', alt: 'Club 28' },
+    { src: '/clubs/club-29.png', alt: 'Club 29' },
+    { src: '/clubs/club-30.png', alt: 'Club 30' },
+    { src: '/clubs/club-31.png', alt: 'Club 31' },
+    { src: '/clubs/club-32.png', alt: 'Club 32' },
+    { src: '/clubs/club-33.png', alt: 'Club 33' },
+    { src: '/clubs/club-34.png', alt: 'Club 34' },
+    { src: '/clubs/club-35.png', alt: 'Club 35' },
+    { src: '/clubs/club-36.png', alt: 'Club 36' },
+    { src: '/clubs/club-37.png', alt: 'Club 37' },
+    { src: '/clubs/club-38.png', alt: 'Club 38' },
+    { src: '/clubs/club-39.png', alt: 'Club 39' },
+    { src: '/clubs/club-40.png', alt: 'Club 40' },
+    { src: '/clubs/club-41.png', alt: 'Club 41' },
+    { src: '/clubs/club-42.png', alt: 'Club 42' },
+    { src: '/clubs/club-43.png', alt: 'Club 43' },
+    { src: '/clubs/club-44.png', alt: 'Club 44' },
+    { src: '/clubs/club-45.png', alt: 'Club 45' },
+    { src: '/clubs/club-46.png', alt: 'Club 46' },
   ];
 
   return (
@@ -44,7 +60,7 @@ export default function Clubs() {
             Organised by
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
-            Convergence 2K26 is brought to you by 30+ student clubs and technical societies working together to create an unforgettable experience
+            Convergence 2K25R is brought to you by 46 student clubs and technical societies working together to create an unforgettable experience
           </p>
         </div>
 

@@ -110,8 +110,9 @@ function MobileCountdown({ eventCategories }: { eventCategories: any[] }) {
 //   );
 // }
 
-// Left Column Component with Countdown
-function LeftEventColumn({ eventCategories }: { eventCategories: any[] }) {
+// Left Column Component with Countdown - Not currently used
+// @ts-expect-error - Function defined but not currently used
+function LeftEventColumn() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [prevSeconds, setPrevSeconds] = useState(0);
 
