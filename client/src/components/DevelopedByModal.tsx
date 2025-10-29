@@ -1,8 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { FaLinkedin, FaTimes } from 'react-icons/fa';
-import dev1Image from '../assets/dev1.png';
-import dev2Image from '../assets/dev2.png';
-import dev3Image from '../assets/dev3.jpg';
 
 interface TeamMember {
   name: string;
@@ -17,22 +14,23 @@ interface DevelopedByModalProps {
 }
 
 const teamMembers: TeamMember[] = [
-  {
-    name: 'Akhil',
-    role: 'Web Developer',
-    image: dev1Image,
-    linkedin: 'https://www.linkedin.com/in/pettem-akhil-varsh-4ba049285',
-  },
+  
   {
     name: 'Sai Ritesh',
     role: 'Web Developer',
-    image: dev2Image,
+    image: '/dev2.png',
     linkedin: 'https://www.linkedin.com/in/sai-ritesh-domakuntla/',
+  },
+  {
+    name: 'Akhil',
+    role: 'Web Developer',
+    image: '/dev1.png',
+    linkedin: 'https://www.linkedin.com/in/pettem-akhil-varsh-4ba049285',
   },
   {
     name: 'Hasnika',
     role: 'Web Developer',
-    image: dev3Image,
+    image: '/dev3.jpg',
     linkedin: 'https://www.linkedin.com/in/sri-hasnika/',
   },
 ];
