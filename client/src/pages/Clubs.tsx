@@ -4,7 +4,7 @@ import { StarsBackground } from '@/components/StarsBackground';
 export default function Clubs() {
   // 46 club logos - Update these paths after downloading images locally
   const clubImages = [
-    { src: '/clubs/club-08.png', alt: 'Club 8' },
+    { src: '/clubs/club-gdgc.png', alt: 'GDGC' },
     { src: '/clubs/club-01.png', alt: 'Club 1' },
     { src: '/clubs/club-02.png', alt: 'Club 2' },
     { src: '/clubs/club-03.png', alt: 'Club 3' },
