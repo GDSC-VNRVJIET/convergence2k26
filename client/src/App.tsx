@@ -5,6 +5,7 @@ import './App.css'
 import PillNav from './components/PillNav'
 import Footer from './components/Footer'
 import LandingVideo from './components/LandingVideo'
+import DevelopedByModal from './components/DevelopedByModal'
 import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
@@ -21,6 +22,7 @@ function App() {
   const [showTransition, setShowTransition] = useState(false)
   const [showIntroAnimation, setShowIntroAnimation] = useState(false)
   const [showNav, setShowNav] = useState(false)
+  const [showDevelopedByModal, setShowDevelopedByModal] = useState(false)
 
   // refs for the sections
   const sectionsRef = useRef<Record<Page, HTMLElement | null>>({
@@ -89,6 +91,10 @@ function App() {
     { label: 'Contact', href: 'contact' },
   ]
 
+  const handleDevelopedByClick = () => {
+    setShowDevelopedByModal(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col text-white ">
       {/* Landing Video */}
@@ -106,6 +112,24 @@ function App() {
           />
         )}
       </AnimatePresence>
+
+      {/* Floating Developed By Button */}
+      {!showLanding && (
+        <motion.button
+          onClick={handleDevelopedByClick}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-black/50 backdrop-blur-md text-white text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-black/70 hover:scale-105 flex items-center gap-2 border border-white/20 transition-all duration-200 z-50 shadow-lg"
+        >
+          Developed by
+          <img
+            src="https://gdsc-vnrvjiet.vercel.app/logo.png"
+            alt="GDSC Logo"
+            className="w-5 h-3 sm:w-6 sm:h-4"
+          />
+        </motion.button>
+      )}
 
       {/* PillNav */}
       {!showLanding && showNav && (
@@ -183,6 +207,12 @@ function App() {
       )}
 
       {!showLanding && <Footer />}
+
+      {/* Developed By Modal */}
+      <DevelopedByModal 
+        isOpen={showDevelopedByModal} 
+        onClose={() => setShowDevelopedByModal(false)} 
+      />
     </div>
   )
 }
