@@ -201,7 +201,7 @@ function CategorySwitch({ category, isActive, onToggle }: {
     )
 }
 
-function DisplayScreen({ activeCategories, selectedCategory, eventCategories, selectedEvent, onEventSelect, onBackToCategory, onCategorySelect, isMobile }: {
+function DisplayScreen({ activeCategories, selectedCategory, eventCategories, onEventSelect, onCategorySelect, isMobile }: {
     activeCategories: any[]
     selectedCategory: string | null
     eventCategories: any[]
