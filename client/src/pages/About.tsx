@@ -47,7 +47,7 @@ export default function About() {
               </p>
               
               <p>
-                The <span className="text-white font-bold">28-year legacy</span> of convergence would start on <span className="text-white font-semibold">3rd of November, 2025</span> and continues for 2 days, including series of events, workshops, technical presentations, fun events, talks, hackathons, and many more!
+                The <span className="text-white font-bold">27-year legacy</span> of convergence would start on <span className="text-white font-semibold">3rd of November, 2025</span> and continues for 2 days, including series of events, workshops, technical presentations, fun events, talks, hackathons, and many more!
               </p>
             </div>
           </div>
