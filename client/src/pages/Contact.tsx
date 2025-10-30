@@ -5,10 +5,9 @@ import { Marquee } from "@/components/ui/marquee";
 
 export default function Contact() {
   const contacts = [
-    { name: "Karthikeya", phone: "+91 8978219896", role: "Event Coordinator" },
-    { name: "Prajwala", phone: "+91 7702019255", role: "Technical Lead" },
-    { name: "Aashritha", phone: "+91 8297828446", role: "Operations Head" },
-    { name: "Manoj", phone: "+91 9010303229", role: "Marketing Lead" },
+    { name: "Sanjana Kanth", phone: "+91 6305278995", role: "Event Coordinator" },
+    { name: "Geethika Rao", phone: "+91 6303724808", role: "Event Coordinator" },
+    { name: "Anagha Sanjana", phone: "+91 8247816008", role: "Event Coordinator" },
   ];
 
   const ContactCard = ({ name, phone, role }: { name: string; phone: string; role: string }) => {
