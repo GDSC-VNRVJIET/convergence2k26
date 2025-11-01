@@ -13,6 +13,8 @@ import Themes from './pages/Themes'
 import Clubs from './pages/Clubs'
 import Contact from './pages/Contact'
 
+import gdgcLogo from './assets/GDGC logo (4)[1].png';
+
 type Page = 'home' | 'about' | 'events' | 'themes' | 'clubs' | 'contact'
 
 function App() {
@@ -124,7 +126,7 @@ function App() {
         >
           Developed by
           <img
-            src="https://gdsc-vnrvjiet.vercel.app/logo.png"
+            src={gdgcLogo}
             alt="GDSC Logo"
             className="w-5 h-3 sm:w-6 sm:h-4"
           />
