@@ -328,14 +328,15 @@ const HolographicProjection: React.FC<HolographicProjectionProps> = ({ event, on
 
               {/* URL bar - responsive */}
               <div
-                className="flex-1 px-2 md:px-4 py-1 md:py-3 rounded font-mono text-xs md:text-sm"
+                className="flex-1 px-2 md:px-4 py-1 md:py-3 rounded font-mono text-xs md:text-sm min-w-0"
                 style={{
                   background: 'rgba(0, 0, 0, 0.7)',
                   border: '1px solid rgba(255, 255, 255, 0.3)',
                   color: 'rgba(255, 255, 255, 0.8)'
                 }}
               >
-                <TbWorld className="inline mr-2" /> events.convergence.2k25r/details/{event.id}
+                <TbWorld className="inline mr-2" />
+                <p className='truncate'>events.convergence.2k25r/details/{event.id}</p>
               </div>
 
               {/* Close button - responsive */}
