@@ -91,13 +91,13 @@ export const eventsDatabase: Record<string, Event[]> = {
     {
       id: 1,
       name: 'Campus Automation Hackathon',
-      description: '',
+      description: "The Campus Automation Hackathon is here. We're looking for innovators to build real solutions for Smart Education, Digital Campus, Socialisation, or your own big idea.",
       time: '',
       date: '',
       venue: '',
-      club: 'Computer Society of India, VJ Data Quests',
+      club: 'Google Developers Group on Campus, VJ Data Quests',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹20,000'],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -111,7 +111,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'Computer Society of India, VJ Data Quests',
       poster: SoftwareHackathon,
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹50,000'],
       requirements: [],
       contact: 'K. Aakash : 9494895929',
       registerUrl: 'https://unstop.com/hackathons/software-hackathon-convergence2k25r-vallurupalli-nageswara-rao-vignana-jyothi-institute-of-engineering-techno-1578251'
@@ -125,7 +125,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'Computer Society of India, VJ Data Quests',
       poster: 'https://drive.google.com/file/d/1jX9NDH5sQl1XMnZoA46wr_corrMQkgiv/view?usp=drivesdk',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹50,000'],
       requirements: [],
       contact: 'Pranav Pissay –  90004 03390, P Sai Vardhan –  90141 51758, Sameer Sk –  88858 81835',
       registerUrl: 'https://unstop.com/p/convergence-2k25-convergence-2k25r-vnr-vignana-jyothi-institute-of-engineering-and-technology-1579734'
@@ -142,7 +142,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'C-208',
       club: 'IE(I) and Matheletes',
       poster: 'https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg',
-      prizes: ['₹25,000', '₹15,000', '₹10,000'],
+      prizes: ['₹25,000'],
       requirements: [],
       contact: 'Srikar Burugula - 8328292124',
       registerUrl: ''
@@ -156,7 +156,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'ISIE',
       poster: 'https://via.placeholder.com/400x250/059669/ffffff?text=CODING+SPRINT',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -170,7 +170,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'MIH',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹30,000', '₹20,000', '₹10,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -184,7 +184,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-313',
       club: 'ISOI',
       poster: CaptureTheCircuit,
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹15,000'],
       requirements: ['Individual or team of 2', 'Design software (Figma/Adobe)', 'Creative portfolio'],
       contact: 'Meghavarsha - 9100183418',
       registerUrl: 'https://unstop.com/o/xmPEN5y?lb=IdiSSrkd&utm_medium=Share&utm_source=isoiins34556&utm_campaign=Quizzes'
@@ -198,7 +198,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'D-313',
       club: 'ASME',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹10,000'],
       requirements: [],
       contact: 'Siddarth - 8978547432',
       registerUrl: ''
@@ -212,7 +212,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'Google Developer Groups on Campus',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹15,000'],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -226,7 +226,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'B-314,315,316,317 & A-306',
       club: 'Turing Hut',
       poster: CodeRush,
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹3,000'],
       requirements: [],
       contact: 'Shailesh : 6300481860, Balaji : 9642296219',
       registerUrl: 'https://events.vjstartup.com/register/57'
@@ -240,7 +240,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'IEEE',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -254,7 +254,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'IEEE',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -268,7 +268,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'B-213',
       club: 'IETE',
       poster: 'https://drive.google.com/file/d/1VrN372QMCK8fNIuTo0dFGfEyq1_TJUC4/view?usp=drivesdk',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹5,000'],
       requirements: [],
       contact: 'Soumya-9347275202,Preetham 9666673745',
       registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc6AJb6F0EbjO1fwV1LLYd3Y1euP40VEz0kNOBRzNfxAcCWgg/viewform'
@@ -282,7 +282,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'D-217',
       club: 'ICI - IGBC',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,500', '₹1,500', '₹1,000'],
       requirements: ['Laptops required'],
       contact: 'Purushotham-7702436949, Lekhya-7569265644',
       registerUrl: 'https://events.vjstartup.com/register/80'
@@ -380,7 +380,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E 238',
       club: 'Xplor XR',
       poster: '',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹10,000'],
       requirements: ['Laptops required'],
       contact: 'Lohith - 8978019972',
       registerUrl: 'https://bit.ly/4qop5VH'
@@ -394,7 +394,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-401,402,403,501,502',
       club: 'VJ Garuda Vigilance',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹15,000'],
       requirements: ['Laptops required'],
       contact: 'Raghavendra Sai-9059494181, N. Sri Prathamesh-9381665353',
       registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScJ5LtjYg5GhSYU_EXfEJSCA11PG1GbtuHcGNilE4V0Xqju5g/viewform'
@@ -408,7 +408,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'VJ Garuda Vigilance',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: ['Laptops required'],
       contact: '',
       registerUrl: ''
@@ -422,7 +422,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'VJ Data Questers',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -436,7 +436,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'IT Department Labs',
       club: 'ACM',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹15,000'],
       requirements: [],
       contact: 'Renuka - +91 97015 00814, Abhinav - +91 73967 32009',
       registerUrl: 'https://unstop.com/p/tech-tournament-vallurupalli-nageswara-rao-vignana-jyothi-institute-of-engineering-technology-telangana-1578635'
@@ -450,7 +450,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'B Block Seminar Hall',
       club: 'Toast Masters',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: [],
       contact: 'Mounish: +91 93917 75862',
       registerUrl: ''
@@ -464,7 +464,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-413',
       club: 'VJ ARC',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹1,000', '₹1,000', '₹1,000'],
       requirements: ['Laptops required'],
       contact: 'Preetham- 9550086891',
       registerUrl: ''
@@ -478,7 +478,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-037',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Geethika Rao +91 6303 724 808',
       registerUrl: 'https://forms.gle/C4utAij6KdvwJ5J8A'
@@ -492,7 +492,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-038',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Geethika Rao +91 6303 724 808',
       registerUrl: 'https://forms.gle/C4utAij6KdvwJ5J8A'
@@ -506,7 +506,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'E-037',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Geethika Rao +91 6303 724 808',
       registerUrl: 'https://forms.gle/C4utAij6KdvwJ5J8A'
@@ -520,7 +520,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'SAC Stage',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Sahruday Rao +91 93468 91248',
       registerUrl: 'https://forms.gle/C4utAij6KdvwJ5J8A'
@@ -534,7 +534,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'Sinti Stage',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Sahruday Rao +91 93468 91248',
       registerUrl: 'https://forms.gle/ormdXpBFMsxX7VSn7'
@@ -548,7 +548,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'SAC Stage',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹2,000'],
       requirements: ['Laptops required'],
       contact: 'Sahruday Rao +91 93468 91248',
       registerUrl: 'https://forms.gle/jrTReD77FKA5qtX76'
@@ -562,7 +562,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'B213',
       club: 'IETE',
       poster: CursedChamber,
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹5,000'],
       requirements: ['Laptops required'],
       contact: 'Sahruday Rao +91 93468 91248',
       registerUrl: 'https://forms.gle/jrTReD77FKA5qtX76'
@@ -576,11 +576,25 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'B-314, 315, 316, 317',
       club: 'Turing Hut',
       poster: CodingContest,
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: ['₹20,000'],
       requirements: ['Laptops required'],
       contact: 'Sahruday Rao +91 93468 91248',
       registerUrl: 'https://forms.gle/jrTReD77FKA5qtX76'
-    }
+    },
+    {
+      id: 66,
+      name: 'AlgoChallenge',
+      description: 'Get ready to showcase your analytical skills at AlgoChallenge. This challenge flips the script on traditional coding contests. Instead of starting from a problem statement and writing code from scratch, you receive the core logic upfront: a defined pseudocode for each question.',
+      time: 'Round 1: Nov 2, 2025 - 8:00 PM to 9:30 PM\n Round 2: Nov 4 - 10:30 AM to 12:30 PM',
+      date: 'Nov 3, 2025',
+      venue: 'VNR VJIET Labs',
+      club: 'Google Developer Groups on Campus',
+      poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
+      prizes: ['₹10,000'],
+      requirements: ['Laptops required'],
+      contact: 'Udhay: +91 83417 95340, Bhanu Prakash: +91 91540 40882',
+      registerUrl: 'https://www.gdgcvnrvjiet.org/algochallenge-enrollment'
+    },
   ],
 
   // workshops
@@ -594,7 +608,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: 'ASME Workshop',
       club: 'ASME',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: [],
       contact: 'Nehanth - 8247417305',
       registerUrl: ''
@@ -608,7 +622,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'ISTE',
       poster: 'https://via.placeholder.com/400x250/dc2626/ffffff?text=CYBER+CTF',
-      prizes: ['₹18,000', '₹12,000', '₹7,000'],
+      prizes: [],
       requirements: ['Laptops required'],
       contact: '',
       registerUrl: ''
@@ -785,7 +799,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       id: 49,
       name: 'Arduino and Rasberry pie',
       description: 'This workshop, organized by the ECE Department for CONVERGENCE 2K25, is a focused, full-day, hands-on training session designed to build your practical expertise in IoT and Embedded Systems.',
-      time: '10:00 PM - 5:00 PM',
+      time: '10:00 AM - 5:00 PM',
       date: 'Nov 4, 2025',
       venue: 'P-202',
       club: 'IEEE',
@@ -799,7 +813,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       id: 50,
       name: 'LLM Workshop',
       description: "A workshop on LLM's focusing on the fundamental topics and it would be a hands on workshop.",
-      time: '10:00 PM - 4:00 PM',
+      time: '10:00 AM - 4:00 PM',
       date: 'Nov 3, 2025',
       venue: 'E-413',
       club: 'VJ ARC',
@@ -813,7 +827,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       id: 51,
       name: 'STM Workshop',
       description: "A hands-on workshop introducing to STM32 microcontroller programming and embedded system applications.",
-      time: '10:00 PM - 1:00 PM',
+      time: '10:00 AM - 1:00 PM',
       date: 'Nov 4, 2025',
       venue: 'A-306',
       club: 'EI(I)',
@@ -827,7 +841,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       id: 52,
       name: 'VLSI FLOW FUSION',
       description: "",
-      time: '10:00 PM - 4:00 PM',
+      time: '10:00 AM - 4:00 PM',
       date: 'Nov 3, 2025',
       venue: 'A-208',
       club: '',
@@ -836,7 +850,21 @@ export const eventsDatabase: Record<string, Event[]> = {
       requirements: ['Laptops required'],
       contact: 'N.Nagaveda +91 9346303966',
       registerUrl: ''
-    }
+    },
+    {
+      id: 67,
+      name: 'AUTOBIOTICS 3.0',
+      description: "Workshop on Introduction to Advanced Robotics! Unleash the future of intelligent machines! Ready to dive into the world where mechanics meets intelligence? Join our Introductory + Hands-On Workshop on Advanced Robotics, a highlight event of Convergence 2k25R, the annual techfest of VNRVJIET!",
+      time: '10:00 AM - 4:00 PM',
+      date: 'Nov 4, 2025',
+      venue: 'C-204',
+      club: '',
+      poster: 'https://via.placeholder.com/400x250/0891b2/ffffff?text=DATA+SCIENCE',
+      prizes: [],
+      requirements: ['Laptops required'],
+      contact: 'Durgamadhav Panda: +91 85005 25321, Sri Harshitha Yalla: +91 79934 44287',
+      registerUrl: 'https://forms.gle/4CDAQ62XdPzrw3St6'
+    },
   ],
 
   // presentations
@@ -881,7 +909,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -895,7 +923,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -909,7 +937,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -923,7 +951,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -937,7 +965,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -951,7 +979,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -965,7 +993,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -979,7 +1007,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -993,7 +1021,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''
@@ -1007,7 +1035,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       venue: '',
       club: 'NSS, VNR SF, VJSV',
       poster: 'https://via.placeholder.com/400x250/ec4899/ffffff?text=TALENT+SHOW',
-      prizes: ['₹15,000', '₹10,000', '₹5,000'],
+      prizes: [],
       requirements: [],
       contact: '',
       registerUrl: ''

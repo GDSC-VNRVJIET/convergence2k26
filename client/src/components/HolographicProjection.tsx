@@ -14,6 +14,7 @@ import {
   FaTimes,
   FaBullseye
 } from "react-icons/fa";
+import TrophyImg from '../assets/trophy.png';
 
 
 // Event type matches eventsData.ts
@@ -579,64 +580,101 @@ const HolographicProjection: React.FC<HolographicProjectionProps> = ({ event, on
                         <div>
                           <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 text-center flex items-center justify-center gap-2"><FaTrophy className="w-6 h-6" /> Prize Pool & Leaderboard</h3>
                           <div className="space-y-4">
-                            {event.prizes.map((prize, i) => (
-                              <div
-                                key={i}
-                                className="flex items-center gap-4 p-4 rounded-lg border"
-                                style={{
-                                  background: i === 0
-                                    ? 'linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05))'
-                                    : i === 1
-                                      ? 'linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(192, 192, 192, 0.05))'
-                                      : i === 2
-                                        ? 'linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(205, 127, 50, 0.05))'
-                                        : 'rgba(0, 0, 0, 0.8)',
-                                  borderColor: i === 0
-                                    ? 'rgba(255, 215, 0, 0.3)'
-                                    : i === 1
-                                      ? 'rgba(192, 192, 192, 0.3)'
-                                      : i === 2
-                                        ? 'rgba(205, 127, 50, 0.3)'
-                                        : 'rgba(255, 255, 255, 0.2)'
-                                }}
-                              >
-                                <div
-                                  className="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold"
+                            { event.prizes.length !== 0 ? (
+                                event.prizes.length === 3 ? (
+                                  event.prizes.map((prize, i) => (
+                                  <div
+                                    key={i}
+                                    className="flex items-center gap-4 p-4 rounded-lg border"
+                                    style={{
+                                      background: i === 0
+                                        ? 'linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05))'
+                                        : i === 1
+                                          ? 'linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(192, 192, 192, 0.05))'
+                                          : i === 2
+                                            ? 'linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(205, 127, 50, 0.05))'
+                                            : 'rgba(0, 0, 0, 0.8)',
+                                      borderColor: i === 0
+                                        ? 'rgba(255, 215, 0, 0.3)'
+                                        : i === 1
+                                          ? 'rgba(192, 192, 192, 0.3)'
+                                          : i === 2
+                                            ? 'rgba(205, 127, 50, 0.3)'
+                                            : 'rgba(255, 255, 255, 0.2)'
+                                    }}
+                                  >
+                                    <div
+                                      className="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold"
+                                      style={{
+                                        background: i === 0
+                                          ? 'linear-gradient(135deg, #FFD700, #FFA500)'
+                                          : i === 1
+                                            ? 'linear-gradient(135deg, #C0C0C0, #A0A0A0)'
+                                            : i === 2
+                                              ? 'linear-gradient(135deg, #CD7F32, #B8860B)'
+                                              : 'linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(200, 200, 200, 0.2))',
+                                        color: i < 3 ? '#000' : '#FFFFFF'
+                                      }}
+                                    >
+                                      {i + 1}
+                                    </div>
+                                    <div className="flex-1">
+                                      <div className="text-white font-medium flex items-center gap-2">
+                                        {i === 0 ? (
+                                          <><FaTrophy className="w-4 h-4 text-yellow-400" /> First Place</>
+                                        ) : i === 1 ? (
+                                          <><FaMedal className="w-4 h-4 text-gray-400" /> Second Place</>
+                                        ) : i === 2 ? (
+                                          <><FaAward className="w-4 h-4 text-orange-600" /> Third Place</>
+                                        ) : (
+                                          `Position ${i + 1}`
+                                        )}
+                                      </div>
+                                      <div className="text-gray-100 text-lg font-bold">{prize}</div>
+                                    </div>
+                                    <div className="text-right">
+                                      <div className="text-gray-300 text-sm">Prize Money</div>
+                                      <div className="text-white font-mono text-lg">
+                                        {prize.includes('₹') ? prize.match(/₹[\d,]+/)?.[0] || 'TBA' : 'TBA'}
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))
+                              ) : (
+                                <div 
+                                  className="prize-pool"
                                   style={{
-                                    background: i === 0
-                                      ? 'linear-gradient(135deg, #FFD700, #FFA500)'
-                                      : i === 1
-                                        ? 'linear-gradient(135deg, #C0C0C0, #A0A0A0)'
-                                        : i === 2
-                                          ? 'linear-gradient(135deg, #CD7F32, #B8860B)'
-                                          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(200, 200, 200, 0.2))',
-                                    color: i < 3 ? '#000' : '#FFFFFF'
+                                    background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 165, 0, 0.3))',
+                                    padding: 30,
+                                    border: '1px solid rgba(255, 215, 0, 1)',
+                                    borderRadius: 20
                                   }}
                                 >
-                                  {i + 1}
+                                  <img 
+                                    src={TrophyImg} 
+                                    alt="Trophy" 
+                                    style={{
+                                      margin: 'auto',
+                                      marginBottom: 20,
+                                      height: 200,
+                                    }}
+                                  />
+                                  <h2 
+                                    className='text-xl md:text-xl font-bold text-white text-center flex items-center justify-center gap-2'
+                                  >
+                                    Exciting prize pool of
+                                  </h2>
+                                  <h2 
+                                    className='text-3xl md:text-6xl font-bold text-white text-center flex items-center justify-center gap-2'
+                                    style={{
+                                      // fontFamily: 'cursive'
+                                    }}
+                                  >
+                                    { event.prizes[0] }
+                                  </h2>
                                 </div>
-                                <div className="flex-1">
-                                  <div className="text-white font-medium flex items-center gap-2">
-                                    {i === 0 ? (
-                                      <><FaTrophy className="w-4 h-4 text-yellow-400" /> First Place</>
-                                    ) : i === 1 ? (
-                                      <><FaMedal className="w-4 h-4 text-gray-400" /> Second Place</>
-                                    ) : i === 2 ? (
-                                      <><FaAward className="w-4 h-4 text-orange-600" /> Third Place</>
-                                    ) : (
-                                      `Position ${i + 1}`
-                                    )}
-                                  </div>
-                                  <div className="text-gray-100 text-lg font-bold">{prize}</div>
-                                </div>
-                                <div className="text-right">
-                                  <div className="text-gray-300 text-sm">Prize Money</div>
-                                  <div className="text-white font-mono text-lg">
-                                    {prize.includes('₹') ? prize.match(/₹[\d,]+/)?.[0] || 'TBA' : 'TBA'}
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
+                              )
+                            ) : null }
                           </div>
                         </div>
                       )}
