@@ -858,7 +858,7 @@ export const eventsDatabase: Record<string, Event[]> = {
       time: '10:00 AM - 4:00 PM',
       date: 'Nov 4, 2025',
       venue: 'C-204',
-      club: '',
+      club: 'Airbots, Google Developer Groups on Campus',
       poster: 'https://via.placeholder.com/400x250/0891b2/ffffff?text=DATA+SCIENCE',
       prizes: [],
       requirements: ['Laptops required'],
